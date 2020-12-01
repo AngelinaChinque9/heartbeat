@@ -1,0 +1,60 @@
+
+.heart{
+width: 1000px;
+height: 1000px;
+background-color: #F5B7B1;
+position: absolute;
+top: 50% ;
+left: 47%;
+transform: rotate(-45deg);
+animation-name: beat;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+.heart::before,
+.heart::after {
+    content:"";
+    background-color:#F5B7B1;
+border-radius: 50%;
+height: 100px;
+position:absolute;
+width: 100px;
+bottom: 50%;
+animation-name: beat;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+.heart::after{
+    top:0;
+    left: 50%;
+}
+@keyframes beat{
+    0% {
+        width: 50px;
+        height: 50px;
+    }
+    40%{
+        width: 50px;
+        height: 50px;
+    }
+    50%{
+        width: 60px;
+        height: 60px;
+    }
+    60%{
+        width: 50px;
+        height: 50px;
+    }
+    70%{
+        width: 60px;
+        height: 60px;
+    }
+    80%{
+        width: 50px;
+        height: 50px;
+    }
+    100%{
+        width: 50px;
+        height: 50px;
+    }
+}
